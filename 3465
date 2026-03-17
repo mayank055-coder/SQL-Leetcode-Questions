@@ -1,0 +1,7 @@
+https://leetcode.com/problems/find-products-with-valid-serial-numbers/description/
+
+# Write your MySQL query statement below
+SElECT p.product_id,p.product_name,p.description
+FROM products as p
+WHERE regexp_like(description,"\\bSN[0-9]{4}-[0-9]{4}\\b",'c')
+ORDER BY p.product_id;
